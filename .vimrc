@@ -10,7 +10,7 @@ set guioptions-=T  "关闭gvim的工具栏
 set guioptions-=r "关闭右部滚动条
 set hlsearch " 搜索高亮
 set incsearch " 即时开始搜素
-set cindent "C风格缩进
+""set cindent "C风格缩进
 set ts=4 "设置tab宽度
 set showcmd "显示未完成命令
 
@@ -33,9 +33,11 @@ map <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc> :tabnext<CR>
 
 "括号补全
-inoremap  [  []<Esc>i                          
 inoremap  {  {<CR>}<Left><CR><Up><Tab>
-inoremap  (  ()<Esc>i
+inoremap  (  ()<Left>
+inoremap  [  []<Left>
+inoremap  "  ""<Left>
+inoremap  '  ''<Left>
 
 "pathogen
 execute pathogen#infect()
