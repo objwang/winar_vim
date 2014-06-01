@@ -31,6 +31,8 @@ map <M-left> :tabprevious<CR>
 map <M-right> :tabnext<CR>
 map <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc> :tabnext<CR>
+nmap<C-]> :!ctags -R<CR>
+imap <C-n> <C-x><C-o>
 
 "括号补全
 inoremap  {  {<CR>}<Left><CR><Up><Tab>
@@ -93,3 +95,4 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+let g:tagbar_autofocus=1
