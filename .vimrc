@@ -10,9 +10,16 @@ set guioptions-=T  "关闭gvim的工具栏
 set guioptions-=r "关闭右部滚动条
 set hlsearch " 搜索高亮
 set incsearch " 即时开始搜素
-""set cindent "C风格缩进
-set ts=4 "设置tab宽度
+
 set showcmd "显示未完成命令
+
+"缩进相关"
+set autoindent " same level indent
+set smartindent " next level indent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 function! MaximizeWindow()
 	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
@@ -31,11 +38,9 @@ map <M-left> :tabprevious<CR>
 map <M-right> :tabnext<CR>
 map <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc> :tabnext<CR>
-nmap<C-]> :!ctags -R<CR>
-imap <C-n> <C-x><C-o>
 
 "括号补全
-inoremap  {  {<CR>}<Left><CR><Up><Tab>
+"inoremap  {  {<CR>}<Left><CR><Up><Tab>
 inoremap  (  ()<Left>
 inoremap  [  []<Left>
 inoremap  "  ""<Left>
@@ -96,3 +101,11 @@ let g:tagbar_type_go = {
 \ }
 
 let g:tagbar_autofocus=1
+
+
+"nerdcommenter"
+let mapleader=","
+
+"youCompleteMe"
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+

@@ -22,3 +22,6 @@ winar_vim
 	
 	gtags : 弥补一点点ctags的缺憾
 	
+    ycm : 发现它作为补全插件实在不错。
+
+    nerdcomment ： 用于切换注释
