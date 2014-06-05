@@ -8,7 +8,7 @@ filetype plugin indent on
 set guioptions-=m  "关闭gvim的菜单栏
 set guioptions-=T  "关闭gvim的工具栏
 set guioptions-=r "关闭右部滚动条
-set hlsearch " 搜索高亮
+""set hlsearch " 搜索高亮
 set incsearch " 即时开始搜素
 
 set showcmd "显示未完成命令
@@ -16,8 +16,8 @@ set showcmd "显示未完成命令
 "缩进相关"
 set autoindent " same level indent
 set smartindent " next level indent
-set expandtab
 set tabstop=4
+set expandtab
 set shiftwidth=4
 set softtabstop=4
 
@@ -108,4 +108,11 @@ let mapleader=","
 
 "youCompleteMe"
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_global_ycm_extra_conf = '/home/winkar/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+"let g:clang_library_path = '/usr/lib/llvm-3.4/lib/libclang.so.1'
 
+"vim latex suite"
+"set greprg=grep\ -nH\$* "使grep总是生成文件名
+"let g:tex_flavor='latex' "使vim默认把空的tex文件设为plaintex 而不是tex
+"set iskeyword+=:
+"autocmd BufEnter *.tex set sw=2
