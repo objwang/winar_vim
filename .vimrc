@@ -1,3 +1,40 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+
+"
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+ " To ignore plugin indent changes, instead use:
+" "
+" " Brief help
+" " :PluginList          - list configured plugins
+" " :PluginInstall(!)    - install (update) plugins
+" " :PluginSearch(!) foo - search (or refresh cache first) for foo
+" " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+" "
+" " see :h vundle for more details or wiki for FAQ
+"  Put your non-Plugin stuff after this line"""))"))"))"""""""")"''''''"''''''""'')"''"''"''"""''"'')"")"""
+
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tomasr/molokai'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'davidhalter/jedi'
+
+
+
 syntax on	”语法高亮
 set nocompatible    " 非兼容模式
 set number    "行号显示
@@ -108,11 +145,6 @@ let mapleader=","
 
 "youCompleteMe"
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_global_ycm_extra_conf = '/home/winkar/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
-"let g:clang_library_path = '/usr/lib/llvm-3.4/lib/libclang.so.1'
-
-"vim latex suite"
-"set greprg=grep\ -nH\$* "使grep总是生成文件名
-"let g:tex_flavor='latex' "使vim默认把空的tex文件设为plaintex 而不是tex
-"set iskeyword+=:
-"autocmd BufEnter *.tex set sw=2
+let g:syntastic_ignore_files=[".*\.py$"]
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = '/home/winkar/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
