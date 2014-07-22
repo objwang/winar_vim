@@ -34,6 +34,9 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'davidhalter/jedi'
 
 
+"temp"
+map<F3> i\subsection{<ESC>A}<ESC>
+map<F2> i\section{<ESC>A}<ESC>
 
 syntax on	”语法高亮
 set nocompatible    " 非兼容模式
@@ -148,3 +151,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:syntastic_ignore_files=[".*\.py$"]
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '/home/winkar/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+set completeopt=longest,menu 
